@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuralCare Link — Dashboard Redesign</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <div class="brand">
+            <div class="brand__logo">RC</div>
+            <div>
+              <p class="brand__name">RuralCare Link</p>
+              <p class="brand__tag">Care coordination</p>
+            </div>
+          </div>
+
+          <nav class="nav">
+            <a class="nav__item nav__item--active" href="#">Dashboard</a>
+            <a class="nav__item" href="#">Patients</a>
+            <a class="nav__item" href="#">Referrals</a>
+            <a class="nav__item" href="#">Schedule</a>
+            <a class="nav__item" href="#">Telehealth</a>
+            <a class="nav__item" href="#">Reports</a>
+            <a class="nav__item" href="#">Settings</a>
+          </nav>
+        </div>
+
+        <div class="sync-status">● Sync status: <span>Online</span></div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <label class="search">
+            <span>⌕</span>
+            <input type="text" placeholder="Search patient by name, ID, or phone" />
+          </label>
+
+          <div class="topbar__right">
+            <button class="icon-btn" aria-label="Notifications">🔔</button>
+            <button class="icon-btn" aria-label="Messages">✉️</button>
+            <div class="profile-chip">
+              <div class="avatar">AK</div>
+              <div>
+                <p>Dr. Aisha Khan</p>
+                <small>Primary Care · Village Clinic A</small>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <section class="quick-actions card-grid">
+          <button class="action-card">
+            <span class="icon">＋</span>
+            Add New Patient
+          </button>
+          <button class="action-card">
+            <span class="icon">🩺</span>
+            Start Consultation
+          </button>
+          <button class="action-card">
+            <span class="icon">↗</span>
+            Create Referral
+          </button>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="card schedule">
+            <div class="card__head">
+              <h2>Today’s Schedule</h2>
+              <span>Oct 26, 2023</span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Patient</th>
+                  <th>Reason</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>09:00</td>
+                  <td>Samuel Green</td>
+                  <td>Fever</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>09:30</td>
+                  <td>Maria Garcia</td>
+                  <td>Follow-up</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>10:00</td>
+                  <td>Sarah Smith</td>
+                  <td>Follow-up</td>
+                  <td><button>View</button></td>
+                </tr>
+                <tr>
+                  <td>10:30</td>
+                  <td>Maria Smith</td>
+                  <td>Follow-up</td>
+                  <td><button>View</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="card referrals">
+            <div class="card__head">
+              <h2>Referral Overview</h2>
+            </div>
+            <div class="pill-row">
+              <span class="pill pill--active">Outgoing <strong>10</strong></span>
+              <span class="pill">Incoming <strong>2</strong></span>
+            </div>
+            <div class="metric-row">
+              <div><strong>4</strong><small>Sent</small></div>
+              <div><strong>3</strong><small>Accepted</small></div>
+              <div><strong>3</strong><small>Completed</small></div>
+            </div>
+            <ul class="timeline">
+              <li>John Doe referral accepted <small>2h ago</small></li>
+              <li>Sarah Smith consultation completed <small>5h ago</small></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card__head">
+              <h2>Recent Patients</h2>
+              <span>5 charts opened recently</span>
+            </div>
+            <div class="progress-track">
+              <span style="width: 68%"></span>
+            </div>
+          </article>
+
+          <article class="card alerts">
+            <div class="card__head">
+              <h2>System Alerts</h2>
+            </div>
+            <ul>
+              <li>Incomplete history for Samuel Green (Action needed)</li>
+              <li>New lab results available (3 patients)</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
